@@ -1,0 +1,44 @@
+Blinking Led:
+import RPI.GPIO as GPIO
+from time import sleep
+GPIO.setwarnings(False)
+GPIO.setmode(GPIO.BOARD)
+GPIO.setup(7, GPIO.OUT, initial=GPIO.LOW)
+ while True:
+	GPIO.output(7, GPIO.HIGH)
+	print("LED on")
+	sleep(1)
+	GPIO.output(7, GPIO.LOW)
+	print("LED off")
+	sleep(1)
+Traffic Light:
+import RPi.GPIO as GPIO
+import time
+try:
+deflightTraffic(led1, led2, led3, delay):
+GPIO.output(led1, 1)Print("GREEN") time.sleep(delay)
+GPIO.output(led1, 0)
+GPIO.output(led2, 1) Print("YELLOW")
+time.sleep(delay)
+GPIO.output(led2, 0) GPIO.output(led3, 1)
+Print("RED") time.sleep(delay)
+OGPIO.output(led3, 0)
+GPIO.setmode(GPIO.BCM) button 19
+GPIO.setup(button, GPIO.IN, pull_up_down-GPIO.PUD_UP)
+ledGreen - 16
+led Yellow 12
+ledRed-23
+GPIO.setup(ledGreen, GPIO.OUT)
+GPIO.setup(led Yellow, GPIO.OUT)
+GPIO.setup(ledRed, GPIO.OUT) while True:
+input_state= GPIO.input(button)
+if input state-False:
+print('Button Pressed') light Traffic(ledGreen, led Yellow, ledRed, 1)
+else:
+GPIO.output(led Green, 0)
+GPIO.output(ledYellow, 0) GPIO.output(ledRed, 0)
+except KeyboardInterrupt:
+print "You've exited the program"
+finally:
+GPIO.cleanup()
+
